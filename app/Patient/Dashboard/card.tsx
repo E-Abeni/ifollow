@@ -1,6 +1,8 @@
+import React, { FC } from 'react';
+
 export default function Card({title, Display} : {
 	title: String,
-	Display: React.ReactNode
+	Display: React.FC
 }){
 	return (
 		<div className="flex flex-col h-fit m-4 mx-10 w-4/12 h-5/12/4 border-solid border-2 rounded-2xl border-black p-2 bg-gray-200">
