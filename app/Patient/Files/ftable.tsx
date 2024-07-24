@@ -2,7 +2,14 @@
 
 import Image from 'next/image'
 
-export default function Ftable({file}){
+export default function Ftable({file} : {
+	file : {
+		name: string,
+		ftype: string,
+		description: string,
+		location: string
+	}
+}){
 	
 	return(
 		<tr className="border-solid border-gray-400 border-2">

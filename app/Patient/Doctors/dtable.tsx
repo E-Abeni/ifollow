@@ -2,7 +2,14 @@
 
 import Image from 'next/image'
 
-export default function Dtable({doctor}){
+export default function Dtable({doctor} : {
+	doctor: {
+		img: string,
+		name: string,
+		speciality: string,
+		bio: string
+	}
+}){
 	
 	return(
 		<tr className="border-solid border-gray-400 border-2">
