@@ -1,0 +1,62 @@
+CREATE TABLE Patients(
+
+id bigint NOT NULL,
+name varchar(255) NOT NULL,
+age int,
+sex char(2),
+address json,
+password varchar(255),
+PRIMARY KEY (id)
+);
+
+CREATE TABLE doctors (
+
+id bigint NOT NULL,
+name varchar(255) NOT NULL,
+speciality varchar(255),
+age int,
+sex varchar(2),
+education varchar(255),
+bio varchar(255),
+PRIMARY KEY (id)
+);
+
+
+
+CREATE TABLE messages (
+
+id bigint NOT NULL,
+date Date,
+sender bigint,
+reciver bigint,
+content VARCHAR(1024),
+PRIMARY KEY (id)
+
+);
+
+CREATE TABLE to_read(
+
+id bigint NOT NULL,
+title varchar(255),
+content varchar(2048),
+category varchar(255),
+PRIMARY KEY (id)
+);
+
+CREATE TABLE files(
+
+id bigint NOT NULL,
+name varchar(255),
+type varchar(255),
+location varchar(255),
+description varchar(255),
+patient_id bigint,
+PRIMARY KEY (id)
+);
+
+CREATE TABLE doc_pt(
+patient_id bigint NOT NULL,
+doctor_id bigint NOT NULL,
+PRIMARY KEY (patient_id, doctor_id)
+);
+
