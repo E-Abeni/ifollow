@@ -1,5 +1,14 @@
+"use client"
+
+import FsTable from './fstable'
+import UploadButton from './button'
+
 export default function page(){
 	
-	return <h1> Files page is on build </h1>	
-
-}
+	return (
+	<>
+		<FsTable />
+		<UploadButton />
+		<div className="h-screen"></div>
+	</>
+)}
